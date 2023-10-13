@@ -10,22 +10,22 @@ __Table of contents__
 
 ## System Requirements
 
- - Your system must have NodeJs Version 18.0 or above installed in it
+  - Your system must have NodeJs Version 18.0 or above installed in it
 
 ## Application Installation
 
- - Download/Clone the code
- - Go to the project folder "day2_assignments/assignment1"
- - ```bash run command "npm install" ```
- - You will see the "node_modules" folder got generated and the project is ready now
+  - Download/Clone the code
+  - Go to the project folder "day2_assignments/assignment1"
+    - ```bash run command "npm install" ```
+  - You will see the "node_modules" folder got generated and the project is ready now
 
 ## Checking Application
 
- - Go to the project folder "day2_assignments/assignment1" ::
+  - Go to the project folder "day2_assignments/assignment1" ::
     - ```bash run command node ./cli/cliy.js --help``` To get the project help
     - ```bash run command node ./cli/cliy.js filestore``` To get the filestore command help
 
 ## Running Application
 
- - Go to the project folder "day2_assignments/assignment1" ::
+  - Go to the project folder "day2_assignments/assignment1" ::
     - ```bash run command node ./cli/cliy.js filestore --text="THE DESIRED TEXT YOU WANT" --filename=THE_FILE_NAME_WITHOUT_EXTENSION```

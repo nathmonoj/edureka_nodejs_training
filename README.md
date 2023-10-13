@@ -13,6 +13,6 @@ __Table of contents__
 ## Day2 Assinments
 
   - **Assignment 1** :: Go to "day2_assignments/assignment1"
-    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day2_assignments/assignment1/README.md
+    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day2_assignments/assignment1 and check the README.md
   - **Assignment 2** :: Go to "day2_assignments/assignment2"
-    -Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day2_assignments/assignment2/README.md
+    -Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day2_assignments/assignment2 and check the README.md

@@ -1,0 +1,18 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "Create An Application, Deploy With Pm2 And Nginx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "NodeJs",
+    "Day2",
+    "Assignment 1",
+    "Pm2 And Nginx"
+  ],
+  "author": "Monoj Nath",
+  "license": "MIT"
+}

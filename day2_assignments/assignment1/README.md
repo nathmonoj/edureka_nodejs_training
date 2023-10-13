@@ -28,4 +28,4 @@ __Table of contents__
 ## Running Application
 
  - Go to the project folder "day2_assignments/assignment1" ::
- ```bash run command node ./cli/cliy.js filestore --text="MTHE DESIRED TEXT YOU WANT" --filename=THEFILENAME```
+    - ```bash run command node ./cli/cliy.js filestore --text="THE DESIRED TEXT YOU WANT" --filename=THE_FILE_NAME_WITHOUT_EXTENSION```

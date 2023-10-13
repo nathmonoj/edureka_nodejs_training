@@ -1,18 +1,25 @@
 {
   "name": "assignment2",
   "version": "1.0.0",
-  "description": "Create An Application, Deploy With Pm2 And Nginx",
-  "main": "index.js",
+  "description": "Create application using fs server",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "keywords": [
     "NodeJs",
     "Day2",
-    "Assignment 1",
-    "Pm2 And Nginx"
+    "Assignment 2",
+    "Fs"
   ],
   "author": "Monoj Nath",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }

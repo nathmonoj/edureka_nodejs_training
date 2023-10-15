@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-const filepath = "./src/s_data/user.json";
+const filepath = "./src/_data/user.json";
 
 export async function listUsers(fromatted = false) {
   try {

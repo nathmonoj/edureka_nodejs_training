@@ -1,5 +1,5 @@
 {
-  "name": "assignment2",
+  "name": "assignment1",
   "version": "1.0.0",
   "description": "Create application using fs server",
   "main": "app.js",
@@ -11,8 +11,8 @@
   "type": "module",
   "keywords": [
     "NodeJs",
-    "Day2",
-    "Assignment 2",
+    "Day3",
+    "Assignment 1",
     "Fs"
   ],
   "author": "Monoj Nath",

@@ -22,3 +22,5 @@ __Table of contents__
 
   - **Assignment 1** :: Go to "day3_assignments/assignment1"
     - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/tree/main/day3_assignments/assignment1 and check the README.md
+  - **Assignment 2** :: Go to "day3_assignments/assignment2"
+    -Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/tree/main/day3_assignments/assignment2 and check the README.md

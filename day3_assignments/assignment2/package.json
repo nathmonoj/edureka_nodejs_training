@@ -1,7 +1,7 @@
 {
-  "name": "assignment1",
+  "name": "assignment2",
   "version": "1.0.0",
-  "description": "Create application using fs server",
+  "description": "Create application to make API call using request object",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -12,12 +12,15 @@
   "keywords": [
     "NodeJs",
     "Day3",
-    "Assignment 1"
+    "Assignment 2"
   ],
   "author": "Monoj Nath",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.5.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

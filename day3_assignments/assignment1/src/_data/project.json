@@ -1,0 +1,26 @@
+[
+  {
+    "pid": "LSC",
+    "projectName": "Romaguera-Crona",
+    "projectDesc": "Multi-layered client-server neural-net",
+    "projecTag": "To study living organisms and life processes"
+  },
+  {
+    "pid": "DGTL",
+    "projectName": "Deckow-Crist",
+    "projectDesc": "Proactive didactic contingency",
+    "projecTag": "Electronic technology tto store and processes data"
+  },
+  {
+    "pid": "RTL",
+    "projectName": "Romaguera-Jacobson",
+    "projectDesc": "Face to face bifurcated interface",
+    "projecTag": "Retail is the sale of goods or services from a business directly to a consumer for their own use."
+  },
+  {
+    "pid": "PHRM",
+    "projectName": "Robel-Corkery",
+    "projectDesc": "Multi-tiered zero tolerance productivity",
+    "projecTag": "To research and produce drugs/medicines for patients."
+  }
+]

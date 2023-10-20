@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose'
 const MoviesSchema = new Schema({
   name: String,
   genre: String,
-  ratinng: Schema.Types.Decimal128,
+  rating: Schema.Types.Decimal128,
   language: String
 })
 

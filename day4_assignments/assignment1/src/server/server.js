@@ -9,6 +9,7 @@ export async function serverInit() {
   server.use(express.json());
 
   server.post('/movies/add', apiController.addMovie)
+  server.get('/movies', apiController.getMovies)
 
 
   server.listen(port, (err) => {

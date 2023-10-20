@@ -32,11 +32,22 @@ __Table of contents__
 ## Running Application
 
   - Open Postman and try the below command s for different MongoDb Features
-    - To Add new movie :: http://localhost:3000/movies/add
-      Sample movie json   
-      `{name": "The Twilight Saga: New Moon",
+    - To Add new movie :: http://localhost:3000/movies/add [[Method type POST]]
+      ```
+      Internal Query Running ::
+      const newMovie = new MoviesModel(body)
+      await newMovie.save()
+      ```
+      Sample movie json body ::  
+      ```
+      {name": "The Twilight Saga: New Moon",
         "genre": "Drama",
         "rating": "7.8",
         "language": "English"
-      }`
+      }
+      ```
+    - To Get All movies :: http://localhost:3000/movies [[Method type GET]]
+      ```
+      const allMovies = await MoviesModel.find()
+      ```
 

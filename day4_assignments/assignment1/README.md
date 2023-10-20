@@ -4,20 +4,39 @@
 __Table of contents__
 
   - [System Requirements](#system-requirements)
+  - [Application Installation](#application-installation)
   - [Checking Application](#checking-application)
   - [Running Application](#running-application)
 
 ## System Requirements
 
+  - Your system must have NodeJs Version 18.0 or above installed in it
   - Mongo Db :: Download the suitable version as per your system from https://www.mongodb.com/try/download/community
   - While installing the Mongo Db, select the MongoDB Atlas option to be downloaded and installed
 
+## Application Installation
+
+  - Download/Clone the code
+  - Go to the project folder "day4_assignments/assignment1"
+    - ```bash run command "npm install" ```
+  - You will see the "node_modules" folder got generated and the project is ready now
+
 ## Checking Application
 
-  - Go to Mongo DB Atlas  ::
-    - Step1. Create a Database with Database Name as :: Edureka_Day4_Assignment & Collection Name as :: movies
-    - Step2. Import the "Edureka_Day4_Assignment.movies.json"[[Present in the __data folder]] into the movies collection
+  - Create a folder as the path "C:\MongoDbData\db" and Start the mongod service by running the below command
+    - ```bash run command "mongod --dbpath=C:\MongoDbData\db" ```
+  - Go to the project folder "day4_assignments/assignment1"
+    - ```bash run command "npm install" ```
+    - ```bash run command "npm start" ```
 
 ## Running Application
 
-  - Go to Mongo DB Atlas => Edureka_Day4_Assignment => movies and try out the queries from "Movies_Queries.txt" file
+  - Open Postman and try the below command s for different MongoDb Features
+    - To Add new movie :: http://localhost:3000/movies/add
+      Sample movie json   
+      `{name": "The Twilight Saga: New Moon",
+        "genre": "Drama",
+        "rating": "7.8",
+        "language": "English"
+      }`
+

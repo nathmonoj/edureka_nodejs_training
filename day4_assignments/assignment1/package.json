@@ -1,0 +1,26 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "Create application to to try and run Mongo Db Queries.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon-start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "NodeJs",
+    "Day4",
+    "Assignment 1"
+  ],
+  "author": "Monoj Nath",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

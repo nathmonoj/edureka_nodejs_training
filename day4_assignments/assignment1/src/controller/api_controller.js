@@ -14,3 +14,18 @@ export async function addMovie(req, res) {
     })
   }
 }
+
+export async function getMovies(req, res) {
+  try {
+    const allMovies = await MoviesModel.find()
+    res.json({
+      data: [allMovies]
+    })
+    response.json(allMovies)
+  }
+  catch {
+    res.json({
+      message: 'Coulnot get the Movies list'
+    })
+  }
+}

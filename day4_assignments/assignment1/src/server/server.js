@@ -1,16 +1,13 @@
 import express from "express";
-import * as apiController from "../controller/api_controller.js"
+import MoviesRoute from "../router/router.js";
 
 
 export async function serverInit() {
-  const server = express();
-  const port = 3000;
+  const server = express()
+  const port = 3000
 
-  server.use(express.json());
-
-  server.post('/movies/add', apiController.addMovie)
-  server.get('/movies', apiController.getMovies)
-
+  server.use(express.json())
+  server.use('/movies', MoviesRoute)
 
   server.listen(port, (err) => {
     if (err) throw err

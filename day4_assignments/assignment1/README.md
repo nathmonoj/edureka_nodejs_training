@@ -85,7 +85,6 @@ __Table of contents__
         "achievements": "Super Hit"
       }
       OR
-      ```
       {
         "achievements": "Super Duper Hit"
       }

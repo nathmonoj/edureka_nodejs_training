@@ -1,0 +1,53 @@
+<% extend('../html_layout') %>
+  <div class="container mt-5  mt-5  px-lg-5 ">
+    <div class="bg-white border rounded-5">
+      <table class="table align-middle mb-0 bg-white">
+        <thead class="bg-light">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Order Date</th>
+            <th>Order Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% orders.forEach((order)=> { %>
+            <tr>
+              <td>
+                <p class="fw-bold mb-1">
+                  <%= order.fname %>
+                    <%= order.lname %>
+                </p>
+              </td>
+              <td>
+                <p class="text-muted mb-0">
+                  <%= order.email %>
+                </p>
+              </td>
+              <td>
+                <p class="text-muted mb-0">
+                  <%= order.address %>
+                </p>
+              </td>
+              <td>
+                <p class="text-muted mb-0">
+                  <%= moment(order.createdAt).format('Do MMMM, YYYY'); %>
+                </p>
+              </td>
+              <td>
+                <% var difference=(new Date().getTime() - order.createdAt.getTime()); %>
+                  <% var daysDifference=Math.floor(difference/1000/60/60/24); %>
+                    <% var statusClass=(daysDifference==0) ? 'in-progress' : ((daysDifference==1) ? 'dispatched'
+                      : 'delivered' ); %>
+                      <% var status=statusClass.charAt(0).toUpperCase() + statusClass.slice(1) ; %>
+                        <span class="rounded-pill d-inline badge badge-<%= statusClass %>">
+                          <%= status; %>
+                        </span>
+              </td>
+            </tr>
+            <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>

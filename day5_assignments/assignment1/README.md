@@ -39,10 +39,9 @@ __Table of contents__
         - /user/order-error [[Method type GET Error page to be redirected to if any issue occurs]]
 
     - Part 2 :: Admin Dashboard =>
-      Go To http://localhost:3000/user/add-order :: To PLace Order
-        - /user/add-order [[Method type GET to display the page]]
-        - /user/add-order [[Method type POST to post the order forms data and create order]]
-        - /user/order-placed [[Method type GET Success page to be redirected to after order is placed]]
-        - /user/order-error [[Method type GET Error page to be redirected to if any issue occurs]]
+      Go To http://localhost:3000/admin/dashboard :: To Show the Orders and the status
+        - If ordered date and current date of system is same then set status as In progress
+        - if ordered date is one day more than the current date then set status as Dispatched
+        - if ordered date is two days more than the current date then set status as Delivered
 
 

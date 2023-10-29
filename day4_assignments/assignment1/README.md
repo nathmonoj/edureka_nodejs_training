@@ -26,7 +26,6 @@ __Table of contents__
   - Create a folder as the path "C:\MongoDbData\db" and Start the mongod service by running the below command
     - ```bash run command "mongod --dbpath=C:\MongoDbData\db" ```
   - Go to the project folder "day4_assignments/assignment1"
-    - ```bash run command "npm install" ```
     - ```bash run command "npm start" ```
 
 ## Running Application

@@ -3,8 +3,8 @@ const OrderSchema = new Schema(
   {
     fname: String,
     lname: String,
-    address: String,
-    email: String
+    email: String,
+    address: String
   },
   {
     timestamps: true

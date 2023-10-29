@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import UserRoute from "../router/user_router.js";
+import AdminRoute from "../router/admin_router.js";
 import path from "path";
 import ejsExtended from 'express-ejs-extend'
 
@@ -19,6 +20,7 @@ export async function serverInit() {
   }));
 
   server.use('/user', UserRoute)
+  server.use('/admin', AdminRoute)
 
   server.listen(port, (err) => {
     if (err) throw err

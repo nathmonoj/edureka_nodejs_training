@@ -1,2 +1,0 @@
-1. Query to get all the movies data :: 
-    In Filter put {} and find

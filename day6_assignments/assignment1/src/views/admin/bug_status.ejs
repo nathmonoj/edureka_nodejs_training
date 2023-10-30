@@ -1,0 +1,63 @@
+<% extend('../html_layout') %>
+  <div class="container">
+    <h1 class="text-center text-primary mt-3 mb-3">Admin Dashboard for all the Bugs Logged</h1>
+    <div class="card">
+      <div class="card-header">Bug Data</div>
+      <div class="card-body">
+        <div class="table-responsive">
+
+          <table id="bug_data_table" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Asignee</th>
+                <th>Bug Date</th>
+                <th>Bug Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% bugs.forEach((bug)=> { %>
+                <tr>
+                  <td>
+                    <p class="fw-bold mb-1">
+                      <%= bug.title %>
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text-muted mb-0">
+                      <%= bug.description %>
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text-muted mb-0">
+                      <%= bug.asignee %>
+                    </p>
+                  </td>
+                  <td>
+                    <p class="text-muted mb-0">
+                      <%= moment(bug.createdAt).format('Do MMMM, YYYY'); %>
+                    </p>
+                  </td>
+                  <td>
+                    <% var difference=(new Date().getTime() - bug.createdAt.getTime()); %>
+                      <% var daysDifference=Math.floor(difference/1000/60/60/24); %>
+                        <% var statusClass=(daysDifference>3) ? 'priority' : 'in-progress'; %>
+                          <% var status=statusClass.charAt(0).toUpperCase() + statusClass.slice(1) ; %>
+                            <span class="rounded-pill d-inline badge badge-<%= statusClass %>">
+                              <%= `${status}(${daysDifference} days passed)`; %>
+                            </span>
+                  </td>
+                </tr>
+                <% }); %>
+            </tbody>
+          </table>
+          <script>
+            $(document).ready(function () {
+              $('#bug_data_table').DataTable();
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>

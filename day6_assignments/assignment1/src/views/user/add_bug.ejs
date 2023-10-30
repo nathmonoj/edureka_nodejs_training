@@ -1,0 +1,22 @@
+<% extend('../html_layout') %>
+  <div class="container">
+    <h1 class="text-center mt-3 mb-3">Please Create/Add Your Bug</h1>
+    <div class="card">
+      <div class="card-header">Bug Form</div>
+      <div class="card-body">
+        <form method="POST" action="/user/add-bug">
+          <div class="mb-3">
+            <label>Title</label>
+            <input type="text" name="title" id="title" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label>Description</label>
+            <textarea name="description" id="description" class="form-control" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <input type="submit" name="submit_button" class="btn btn-primary" value="Add Bug" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,7 +1,7 @@
 {
   "name": "assignment1",
   "version": "1.0.0",
-  "description": "Create application to to try and run Mongo Db Queries.",
+  "description": "Create application to try and run Mongo Db Queries.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -11,7 +11,7 @@
   "type": "module",
   "keywords": [
     "NodeJs",
-    "Day5",
+    "Day6",
     "Assignment 1"
   ],
   "author": "Monoj Nath",

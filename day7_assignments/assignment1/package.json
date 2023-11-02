@@ -1,7 +1,7 @@
 {
   "name": "assignment1",
   "version": "1.0.0",
-  "description": "Create application to try and run Mongo Db Queries.",
+  "description": "Create application to create shopping cart dashboard using jwt.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -11,17 +11,22 @@
   "type": "module",
   "keywords": [
     "NodeJs",
-    "Day5",
+    "Day7",
     "Assignment 1"
   ],
   "author": "Monoj Nath",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-extend": "^0.0.1",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
     "moment": "^2.29.4",
-    "mongoose": "^7.6.3"
+    "mongoose": "^7.6.3",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

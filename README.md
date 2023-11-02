@@ -9,6 +9,7 @@ __Table of contents__
   - [Day4 Assinments](#day4-assignments)
   - [Day5 Assinments](#day5-assignments)
   - [Day6 Assinments](#day6-assignments)
+  - [Day6 Assinments](#day7-assignments)
 
 ## Assinments Repo
 
@@ -42,3 +43,8 @@ __Table of contents__
 
   - **Assignment 1** :: Go to "day6_assignments/assignment1"
     - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day6_assignments/assignment1 and check the README.md
+
+## Day7 Assignments
+
+  - **Assignment 1** :: Go to "day7_assignments/assignment1"
+    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day7_assignments/assignment1 and check the README.md

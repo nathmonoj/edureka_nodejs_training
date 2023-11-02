@@ -41,4 +41,5 @@ __Table of contents__
 
     - Part 2 :: For Admin Users(after login) =>
         - /admin/dashboard [[Method type GET to display the page and user lists]]
+        - /user/logout [[Method type GET to logout the user and destroy the session]]
 

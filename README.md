@@ -9,7 +9,7 @@ __Table of contents__
   - [Day4 Assinments](#day4-assignments)
   - [Day5 Assinments](#day5-assignments)
   - [Day6 Assinments](#day6-assignments)
-  - [Day6 Assinments](#day7-assignments)
+  - [Day7 Assinments](#day7-assignments)
 
 ## Assinments Repo
 

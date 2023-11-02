@@ -37,9 +37,11 @@ __Table of contents__
       
       - Part 1 :: For Normal Users(after login)
         - /user/dashboard [[Method type GET to display the page]]
+          [[*Note: User Login appears via jwt token verifying]]  
         - /user/logout [[Method type GET to logout the user and destroy the session]]
 
     - Part 2 :: For Admin Users(after login) =>
         - /admin/dashboard [[Method type GET to display the page and user lists]]
+          [[*Note: User Login appears via jwt token verifying]]  
         - /user/logout [[Method type GET to logout the user and destroy the session]]
 

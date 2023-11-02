@@ -1,6 +1,7 @@
 import Bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { UserModel } from '../schema/schema.js'
+import { jwtTokenVerifier } from "../utils/common.js";
 import dotenv from "dotenv";
 dotenv.config();
 const SECRET_KEY = process.env.JWT_SECRET;
@@ -56,17 +57,12 @@ export async function loginUser(req, res) {
         if (payload) {
           const token = await jwt.sign({ id: _id }, SECRET_KEY)
           req.session.user = {
-            name: _name,
-            email: email,
-            id: _id,
             loggedIn: true,
-            token: token,
-            role: role
+            jwtToken: token,
+            role
           }
           req.session.save(function (err) {
             const redirectTo = (role == 'admin') ? '/admin/dashboard' : '/user/dashboard'
-            console.log('role', role)
-            console.log('redirectTo', redirectTo)
             res.redirect(redirectTo)
           })
         } else {
@@ -88,9 +84,18 @@ export async function loginUser(req, res) {
 }
 // Logged in Page
 export async function userLoggedInPage(req, res) {
-  var userSession = req.session && req.session;
-  if (userSession.user && userSession.user && userSession.user.loggedIn) {
-    res.render("user/logged_in", { title: 'User Logged In', user: userSession.user })
+  let userSession = req.session && req.session && req.session.user;
+  if (userSession && (userSession.role == 'user') && userSession && userSession.loggedIn && userSession.jwtToken) {
+    const userData = await jwtTokenVerifier(userSession.jwtToken)
+    if (userData._id) {
+      req.session.user = userSession = { ...req.session.user, data: userData }
+      req.session.save(function (err) {
+        res.render("user/logged_in", { title: 'User Logged In', user: userSession.data })
+      })
+    }
+    else {
+      res.redirect('/user/login')
+    }
   }
   else {
     res.redirect('/user/login')

@@ -1,0 +1,25 @@
+<% extend('../html_layout') %>
+  <div class="container mt-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">Shopping Cart - Login Form</div>
+      <div class="card-body">
+        <% if(message && message.error){ %>
+          <div class="alert alert-danger mt-4">
+            <%= message.error %>
+          </div>
+          <% } %>
+            <form action="/user/login" method="POST">
+              <div class="mb-3">
+                <label for="email-reg" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email-reg" name="email">
+              </div>
+              <div class="mb-3">
+                <label for="password-reg" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password-reg" name="password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            For Registration <b><a href="/user/register">Click Here</a></b>
+      </div>
+    </div>
+  </div>

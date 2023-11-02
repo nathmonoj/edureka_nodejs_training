@@ -1,5 +1,5 @@
-# Day7-Assignment 1 POC
-> Assignment to create Shopping cart application using jwt.
+# Day6-Assignment 1 POC
+> Assignment to create Bug Tracker Application.
 
 __Table of contents__
 
@@ -30,18 +30,15 @@ __Table of contents__
 
 ## Running Application
 
-  - User Related Activities ::
-    - Part 1 :: To PLace Bug =>
-      Go To http://localhost:3000/user/add-bug :: To Create the bug
-        - /user/add-bug [[Method type GET to display the page]]
-        - /user/add-bug [[Method type POST to post the bug forms data and create bug]]
-        - /user/bug-created [[Method type GET Success page to be redirected to after bug is created]]
-        - /user/bug-error [[Method type GET Error page to be redirected to if any issue occurs]]
+  - User Related Activities ::    
+      Go To http://localhost:3000/ :: Site Home page/Login Page(also can be accessed as /user/login) [[Method type GET to display the page]]
+        - Has Registration link too in bottom as /user/register [[Method type GET to display the page]]
+          [[*Note: By default all the users shal be created with user role. For admin user atleast assign one user with role as 'admin' manually in mongodb backend(via atlas)]]  
+      
+      - Part 1 :: For Normal Users(after login)
+        - /user/dashboard [[Method type GET to display the page]]
+        - /user/logout [[Method type GET to logout the user and destroy the session]]
 
-    - Part 2 :: Admin Dashboard =>
-      Go To http://localhost:3000/admin/dashboard :: To Show the Bugs and the status
-        - If buged date and current date of system is same then set status as In progress
-        - if buged date is one day more than the current date then set status as Dispatched
-        - if buged date is two days more than the current date then set status as Delivered
-[[*Note: Special usage of environmemt config(.env file) and assigning support team to each ticket while creation]]
+    - Part 2 :: For Admin Users(after login) =>
+        - /admin/dashboard [[Method type GET to display the page and user lists]]
 

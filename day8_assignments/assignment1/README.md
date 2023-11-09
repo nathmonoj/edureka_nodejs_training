@@ -17,7 +17,7 @@ __Table of contents__
 ## Application Installation
 
   - Download/Clone the code
-  - Go to the project folder "day8_assignments" and download as directed below ::
+  - Go to the project folder "day8_assignments/assignment1" and download as directed below ::
     Backend(Node) :: "node_backend"
       - ```bash run command "npm install" ```
       - You will see the "node_modules" folder got generated and the project is ready now

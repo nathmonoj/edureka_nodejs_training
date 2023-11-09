@@ -52,5 +52,5 @@ __Table of contents__
 
 ## Day8 Assignments
 
-  - **Assignment 1** :: Go to "day8_assignments/"
-    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day8_assignments/ and check the README.md
+  - **Assignment 1** :: Go to "day8_assignments/assignment1"
+    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day8_assignments/assignment1 and check the README.md

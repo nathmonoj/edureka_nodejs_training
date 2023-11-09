@@ -1,4 +1,4 @@
-# Day7-Assignment 1 POC
+# Day6-Assignment 1 POC
 > Assignment to create Shopping cart application using jwt.
 
 __Table of contents__

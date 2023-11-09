@@ -1,4 +1,4 @@
-# Day6-Assignment 1 POC
+# Day7-Assignment 1 POC
 > Assignment to create Bug Tracker Application.
 
 __Table of contents__
@@ -17,7 +17,7 @@ __Table of contents__
 ## Application Installation
 
   - Download/Clone the code
-  - Go to the project folder "day6_assignments/assignment1"
+  - Go to the project folder "day8_assignments/assignment1"
     - ```bash run command "npm install" ```
   - You will see the "node_modules" folder got generated and the project is ready now
 
@@ -25,7 +25,7 @@ __Table of contents__
 
   - Create a folder as the path "C:\MongoDbData\db" and Start the mongod service by running the below command
     - ```bash run command "mongod --dbpath=C:\MongoDbData\db" ```
-  - Go to the project folder "day6_assignments/assignment1"
+  - Go to the project folder "day8_assignments/assignment1"
     - ```bash run command "npm start" ```
 
 ## Running Application

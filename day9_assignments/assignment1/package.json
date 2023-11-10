@@ -1,33 +1,42 @@
 {
   "name": "assignment1",
   "version": "1.0.0",
-  "description": "Create application to create shopping cart dashboard using jwt.",
+  "description": "Create application to test the APIs.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "nodemon-start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'test/**/*.spec.js'",
+    "test-coverage": "nyc npm start"
   },
   "type": "module",
   "keywords": [
     "NodeJs",
-    "Day7",
+    "Day9",
     "Assignment 1"
   ],
   "author": "Monoj Nath",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "chai-http": "^4.4.0",
+    "cors": "^2.8.5",
+    "deep-email-validator": "^0.1.21",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
+    "email-validator": "^2.0.4",
     "express": "^4.18.2",
     "express-ejs-extend": "^0.0.1",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.29.4",
     "mongoose": "^7.6.3",
+    "sinon": "^17.0.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "nyc": "^15.1.0"
   }
 }

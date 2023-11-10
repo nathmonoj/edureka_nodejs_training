@@ -1,7 +1,7 @@
 {
   "name": "assignment1",
   "version": "1.0.0",
-  "description": "Create application to create shopping cart dashboard using jwt.",
+  "description": "Create application to test the node websocket.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -11,7 +11,7 @@
   "type": "module",
   "keywords": [
     "NodeJs",
-    "Day7",
+    "Day8",
     "Assignment 1"
   ],
   "author": "Monoj Nath",

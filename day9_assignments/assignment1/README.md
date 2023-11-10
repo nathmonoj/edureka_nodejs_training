@@ -1,4 +1,4 @@
-# Day6-Assignment 1 POC
+# Day9-Assignment 1 POC
 > Assignment to Test the API's(Using Mocha and Chai).
 
 __Table of contents__
@@ -31,17 +31,17 @@ __Table of contents__
 ## Running Application
 
   - Test the application ::
-    - Go To "day9_assignments/assignment1" and run 
-      - ```bash run command "npm test" ```
+    - Go To "day9_assignments/assignment1" and run :: 
+      ```bash run command "npm test" ```
 
-        You Must get output like below ::
-        ```testOutput
-        Check Server & APIs
-          ✔ Server started without crashing
-          ✔ GET:: /user/all
+      You Must get output like below ::
+      ```testOutput
+      Check Server & APIs
+        ✔ Server started without crashing
+        ✔ GET:: /user/all
 
-        Calculator Util Test
-          ✔ should add 2 number and provide result
-          ✔ should return null if a is null
-        ```
+      Calculator Util Test
+        ✔ should add 2 number and provide result
+        ✔ should return null if a is null
+      ```
 

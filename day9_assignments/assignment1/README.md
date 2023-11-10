@@ -31,8 +31,7 @@ __Table of contents__
 ## Running Application
 
   - Test the application ::
-    - Go To "day9_assignments/assignment1" and run :: 
-      ```bash run command "npm test" ```
+    - Go To "day9_assignments/assignment1" and run :: ```bash run command "npm test" ```
 
       You Must get output like below ::
       ```testOutput

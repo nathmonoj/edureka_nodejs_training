@@ -1,8 +1,8 @@
-import express from "express";
+import express from "express"
 import cors from 'cors'
-import bodyParser from "body-parser";
-import UserRoute from "../router/user_router.js";
-import dotenv from "dotenv";
+import bodyParser from "body-parser"
+import UserRoute from "../router/user_router.js"
+import dotenv from "dotenv"
 dotenv.config();
 
 const server = await express()

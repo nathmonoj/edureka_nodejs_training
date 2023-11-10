@@ -36,10 +36,6 @@ export async function RegBodyValidator(req, res, next) {
 export async function UpdateBodyValidator(req, res, next) {
   try {
     const { fname, lname, email, password } = req.body;
-    console.log(req.body.passwor)
-    console.log(!password)
-    console.log(password === '')
-    console.log(req.body.password && (password == ''))
     if ((fname !== undefined) && !fname) {
       new APIError(res, { error: "INCORRECT_USER_DETAILS" }, 'First Name cannot be empty.').json();
     }

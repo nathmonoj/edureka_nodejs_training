@@ -13,6 +13,7 @@ __Table of contents__
   - [Day8 Assinments](#day8-assignments)
   - [Day9 Assinments](#day9-assignments)
   - [Day10 Assinments](#day10-assignments)
+  - [Final Certification Assinment](#final-certification-assignment)
 
 ## Assinments Repo
 
@@ -68,3 +69,9 @@ __Table of contents__
 
   - **Assignment 1** :: Go to "day10_assignments/assignment1"
     - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/day10_assignments/assignment1 and check the README.md
+
+
+## Final Certification Assinment
+
+  - **Assignment 1** :: Go to "day10_assignments/assignment1"
+    - Documentation :: https://github.com/nathmonoj/edureka_nodejs_training/blob/main/final_certification_assignment and check the README.md

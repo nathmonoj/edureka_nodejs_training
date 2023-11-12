@@ -3,6 +3,7 @@ import axios from 'axios';
 import email_icon from '../conponents/Assets/email.png'
 import pwd_icon from '../conponents/Assets/pwd.png'
 const loginApiUrl = `${process.env.REACT_APP_NODE_API_DOMAIN}${process.env.REACT_APP_NODE_LOGIN_API_URL}`
+console.log(loginApiUrl)
 
 export default function Login(props) {
   // States for registration
@@ -62,7 +63,7 @@ export default function Login(props) {
   return (
     <div className="inner-container">
       <div className='header'>
-        <div className="text">Sign In</div>
+        <div className="text">Sign In(As Admin)</div>
         <div className="underline"></div>
       </div>
       <div className="inputs">

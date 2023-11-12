@@ -21,6 +21,7 @@ __Table of contents__
     Backend(Node) :: "node_backend"
       - ```bash run command "npm install" ```
       - You will see the "node_modules" folder got generated and the project is ready now
+
     Frontend(React) :: "react_front_end"
       - ```bash run command "npm install" ```
       - You will see the "node_modules" folder got generated and the project is ready now

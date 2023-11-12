@@ -1,53 +1,34 @@
 import express from "express";
 import cors from 'cors'
 import bodyParser from "body-parser"
-
-import UserRoute from "../router/user_router.js"
-
-import http from "http";
-import { Server as SocketIOServer } from "socket.io";
-import { IOHandler } from '../socketio_server/socket_handler.js'
-
 import dotenv from "dotenv";
+
+import UserRoute from '../router/user_router.js'
+import { weatherAPIRoute, newsAPIRoute } from '../router/app_api_router.js'
+
 dotenv.config();
 
-export async function serverInit() {
-  const port = 4000
-  // Generating the API Server
-  const apiServer = express()
+// Initialising the API Server
+const nodeServer = express()
 
-  // Generating the Socket IO Server
-  const httpServer = http.createServer(apiServer)
-  const io = new SocketIOServer(httpServer, {
-    cors: {
-      origin: "*",
-    },
-  })
+// Alowing CORS to the API Server
+await nodeServer.use(cors({
+  origin: '*'
+}));
+await nodeServer.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
-  IOHandler(io)
+// Startin the API Server
+nodeServer.use(express.json())
+nodeServer.use(bodyParser.urlencoded({
+  extended: true
+}))
+nodeServer.use('/admin', UserRoute)
+nodeServer.use('/weather/api/v1', weatherAPIRoute)
+nodeServer.use('/news', newsAPIRoute)
 
-  apiServer.use(cors({
-    origin: '*'
-  }));
 
-  apiServer.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
-
-  // Startin the API Server
-  apiServer.use(express.json())
-
-  apiServer.use(bodyParser.urlencoded({
-    extended: true
-  }))
-
-  apiServer.use('/user', UserRoute)
-
-  httpServer.listen(port, (err) => {
-    if (err) throw err
-    console.log(`Application server started at: http://localhost:${port}`)
-  })
-
-}
+export default nodeServer

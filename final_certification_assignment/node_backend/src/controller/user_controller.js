@@ -1,6 +1,7 @@
 import Bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { UserModel } from '../schema/schema.js'
+import { UserModel } from '../schema/user_schema.js'
+import { NewsModel } from '../schema/news_schema.js'
 import { APIResponse, APIError } from '../middleware/response_formatter.js'
 import dotenv from "dotenv";
 dotenv.config();
@@ -10,7 +11,6 @@ const SECRET_KEY = process.env.JWT_SECRET;
 export async function register(req, res) {
   try {
     var { fname, lname, email, password } = req.body;
-    console.log('fname', fname)
     const user = await UserModel.findOne({ email })
     let templateData = { data: [], message: '' }
     let isError = false
@@ -21,12 +21,13 @@ export async function register(req, res) {
     }
     else {
       const hashpassword = await Bcrypt.hash(password, 10);
-      let newUser = new UserModel({ email, fname, lname, password: hashpassword })
+      const role = 'admin'
+      let newUser = new UserModel({ fname, lname, role, email, password: hashpassword })
       newUser = await newUser.save()
       const { _id, ...rest } = newUser
       var { password, __v, updatedAt, ...userData } = rest._doc
       templateData.data = [userData]
-      templateData.message = 'User is created successfully'
+      templateData.message = `User is created successfully(With Role as ${role})`
     }
     if (!isError) {
       new APIResponse(res, templateData.data, templateData.message).json()

@@ -1,4 +1,4 @@
-# Day8-Assignment 1 POC
+# Final-Certification-Assignment 1 POC
 > Assignment to build a Media App.
   Description :: Application has two parts.
   Customer Front End :: To display Latest News, Weather Update, Live Group Chat and Sports Section
@@ -20,10 +20,12 @@ __Table of contents__
 ## Application Installation
 
   - Download/Clone the code
-  - Go to the project folder "day8_assignments/assignment1" and download as directed below ::
+  - Go to the project folder "final_certification_assignment" and download as directed below ::
     Backend(Node) :: "node_backend"
       - ```bash run command "npm install" ```
       - You will see the "node_modules" folder got generated and the project is ready now
+      [[*Note :: If windows user and doesnot have a local certificate issued, can run command ```bash "export NODE_TLS_REJECT_UNAUTHORIZED=0"``` to resolve the api certificate issue while calling  the weather apis]]
+
     Frontend(React) :: "react_front_end"
       - ```bash run command "npm install" ```
       - You will see the "node_modules" folder got generated and the project is ready now
@@ -50,4 +52,3 @@ __Table of contents__
 
   - Messenger Dashboard(Socket Io) ::    
       Post login it opens "Messenger Dashboard" :: Send Messages(uses the Node Socket Io feature "node_backend => socketio_server)
-

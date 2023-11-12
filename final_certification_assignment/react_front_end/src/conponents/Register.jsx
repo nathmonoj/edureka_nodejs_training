@@ -19,7 +19,6 @@ export default function Register(props) {
   const handleSubmit = async (event) => {
     //Prevent page reload
     event.preventDefault()
-    console.log(registerApiUrl)
     axios.post(registerApiUrl, { fname, lname, email, password })
       .then((response) => {
         setSuccessMessages({})
@@ -59,7 +58,7 @@ export default function Register(props) {
   return (
     <div className="inner-container">
       <div className='header'>
-        <div className="text">Sign Up</div>
+        <div className="text">Sign Up(As Admin)</div>
         <div className="underline"></div>
       </div>
       <div className="inputs">

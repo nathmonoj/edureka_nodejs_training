@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { UserModel } from "../schema/schema.js";
+import { UserModel } from "../schema/user_schema.js";
 import dotenv from "dotenv";
 dotenv.config();
 const SECRET_KEY = process.env.JWT_SECRET;

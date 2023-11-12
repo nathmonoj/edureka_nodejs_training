@@ -1,14 +1,14 @@
 import { Router } from 'express'
-import * as Validator from "../middleware/validator.js"
+import * as userValidator from "../middleware/user_validator.js"
 import * as userController from "../controller/user_controller.js"
 
 const UserRoute = Router()
 
 // Registration Routes
-UserRoute.post('/register', Validator.RegBodyValidator, userController.register)
+UserRoute.post('/register', userValidator.RegBodyValidator, userController.register)
 
 // Login Routes
-UserRoute.post('/login', Validator.LoginBodyValidator, userController.login)
+UserRoute.post('/login', userValidator.LoginBodyValidator, userController.login)
 
 export default UserRoute
 

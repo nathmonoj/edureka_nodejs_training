@@ -1,7 +1,7 @@
 
 import emailValidator from 'email-validator'
 import jwt from "jsonwebtoken";
-import { APIError } from '../middleware/response_formatter.js'
+import { APIError } from './response_formatter.js'
 import { jwtTokenVerifier } from "../utils/helper.js";
 import dotenv from "dotenv";
 dotenv.config();
@@ -13,9 +13,9 @@ async function isEmailValid(email) {
 
 export async function RegBodyValidator(req, res, next) {
   try {
-    const { fname, lname, role, email, password } = req.body;
-    if (!fname || !lname || !role || !email || !password) {
-      new APIError(res, { error: "INCORRECT_USER_DETAILS" }, 'First Name/Last Name/Role/Email/Password missing.').json();
+    const { fname, lname, email, password } = req.body;
+    if (!fname || !lname || !email || !password) {
+      new APIError(res, { error: "INCORRECT_USER_DETAILS" }, 'First Name/Last Name/Email/Password missing.').json();
     } else {
       const isValidatEmail = await isEmailValid(email);
       if (!isValidatEmail) {

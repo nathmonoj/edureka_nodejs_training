@@ -36,10 +36,6 @@ export default function MessengerDashboard() {
     setChat([...chat, { ...messageToSend, isMyMessage: true }])
   }
 
-  console.log('friends')
-  console.log(friends)
-  console.log('chat')
-  console.log(chat)
   return (
     <div className="inner-container">
       <div className='header'>

@@ -11,7 +11,7 @@ weatherAPIRoute.get('/weather', apiValidator.weatherQueryValidator, appApiContro
 const newsAPIRoute = Router()
 // Get Latest news API Route
 newsAPIRoute.post('/', apiValidator.addNewsValidator, appApiController.addNews)
-newsAPIRoute.get('/', appApiController.addNews)
+newsAPIRoute.get('/', appApiController.getNews)
 
 export { weatherAPIRoute, newsAPIRoute }
 

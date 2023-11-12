@@ -54,7 +54,6 @@ export default function AdminDashboard() {
   }
   return (
     <div className="inner-container">
-      {addNewsApiUrl}
       <div className='logout'>
         <a href='#' className="logout" onClick={logoutDashboard}>Logout</a>
       </div>

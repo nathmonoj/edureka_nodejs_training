@@ -20,7 +20,6 @@ export default function WeatherDashboard() {
     if (lat && long) {
       try {
         const actualWeatherApiUrl = `${weatherApiUrl}?lat=${lat}&long=${long}`
-        console.log(lat, long)
         const weatherResponse = await axios.get(actualWeatherApiUrl)
         let { data } = weatherResponse
         if (data && data.data && data.data[0]) {

@@ -4,6 +4,7 @@ import './conponents/Style/Style.css'
 import Login from './conponents/Login'
 import Register from './conponents/Register'
 import WeatherDashboard from './conponents/weather/WeatherDashboard'
+import NewsDashboard from './conponents/NewsDashboard'
 import AdminDashboard from './conponents/AdminDashboard'
 
 function App() {
@@ -33,18 +34,18 @@ function App() {
         <div className={`${(!loggedInState) ? '' : 'hide-element'} anonymous-user-container`}>
           <div className='tab-container'>
             <span
-              id='news'
-              className={`${(tabAction == 'news') ? 'active-tab' : ''} tab-label`}
-              onClick={() => { setTabAction('news') }}
-            >
-              Latest News
-            </span>
-            <span
               id='weather'
               className={`${(tabAction == 'weather') ? 'active-tab' : ''} tab-label`}
               onClick={() => { setTabAction('weather') }}
             >
               Weather-Update
+            </span>
+            <span
+              id='news'
+              className={`${(tabAction == 'news') ? 'active-tab' : ''} tab-label`}
+              onClick={() => { setTabAction('news') }}
+            >
+              Latest News
             </span>
             <span
               id='sign-in'
@@ -62,11 +63,11 @@ function App() {
             </span>
           </div>
           <div className='section-wrapper'>
-            <section className={`${(tabAction == 'news') ? '' : 'hide-element'} news-wrapper`} >
-              <Login loggedInSetter={isLoggedIn} />
-            </section>
             <section className={`${(tabAction == 'weather') ? '' : 'hide-element'} weather-wrapper`} >
               <WeatherDashboard />
+            </section>
+            <section className={`${(tabAction == 'news') ? '' : 'hide-element'} news-wrapper`} >
+              <NewsDashboard />
             </section>
             <section className={`${(tabAction == 'sign-in') ? '' : 'hide-element'} sign-in-wrapper`} >
               <Login loggedInSetter={isLoggedIn} />

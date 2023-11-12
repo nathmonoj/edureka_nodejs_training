@@ -43,7 +43,7 @@ export async function getWeather(req, res) {
   }
 }
 
-// Register User
+// Add News
 export async function addNews(req, res) {
   try {
     var { news_title, news_data } = req.body;
@@ -62,6 +62,34 @@ export async function addNews(req, res) {
       var { __v, updatedAt, ...newsData } = rest._doc
       templateData.data = [newsData]
       templateData.message = `News Data is added successfully`
+    }
+    if (!isError) {
+      new APIResponse(res, templateData.data, templateData.message).json()
+    }
+    else {
+      new APIError(res, templateData.data, templateData.message, 400).json()
+    }
+  } catch (error) {
+    console.log(error)
+    new APIError(res, { error: 'INTERNAL_SERVER_ERROR' }, "Internal Server Error Occured!!").json()
+  }
+}
+
+// Add News
+export async function getNews(req, res) {
+  try {
+    var { news_title, news_data } = req.body;
+    const allNews = await NewsModel.find({}, { _id: 0, updatedAt: 0, __v: 0 }).sort({ createdAt: -1 })
+    let templateData = { data: [], message: '' }
+    let isError = false
+    if (allNews) {
+      templateData.data = allNews
+      templateData.message = `All News Data List`
+    }
+    else {
+      isError = true
+      templateData.data = { error: 'NO_NEWS_PRESENT' }
+      templateData.message = 'There is no news present/currently available'
     }
     if (!isError) {
       new APIResponse(res, templateData.data, templateData.message).json()

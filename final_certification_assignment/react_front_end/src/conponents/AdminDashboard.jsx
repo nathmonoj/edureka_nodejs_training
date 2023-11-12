@@ -20,7 +20,30 @@ export default function AdminDashboard() {
   const handleSubmit = async (event) => {
     //Prevent page reload
     event.preventDefault()
-    //axios.post(registerApiUrl, { fname, lname, email, password })
+    await axios.post(addNewsApiUrl, { news_title: newsTitle, news_data: newsData })
+      .then((response) => {
+        setSuccessMessages({})
+        setErrorMessages({})
+        setSuccessMessages({ name: 'header_success', message: 'News is added successfully' })
+      })
+      .catch((error) => {
+        setSuccessMessages({})
+        setErrorMessages({})
+        const error_code = error && error.response && error.response.data && error.response.data.data && error.response.data.data.error
+        const message = error && error.response && error.response.data && error.response.data.message
+        console.log(error)
+        console.log(error_code)
+        console.log(message)
+        let fieldName = '';
+        switch (error_code) {
+          case 'NEWS_ALREADY_EXISTS':
+          case 'INTERNAL_SERVER_ERROR':
+            fieldName = 'header_error'
+            break;
+        }
+        setErrorMessages({ name: fieldName, message: message })
+      });
+
   }
   // Generate JSX code for message
   const renderMessage = (name, messageSetion = 'field', messageType = 'error') => {
@@ -31,6 +54,7 @@ export default function AdminDashboard() {
   }
   return (
     <div className="inner-container">
+      {addNewsApiUrl}
       <div className='logout'>
         <a href='#' className="logout" onClick={logoutDashboard}>Logout</a>
       </div>
@@ -40,6 +64,7 @@ export default function AdminDashboard() {
       </div>
       <div className="inputs">
         {renderMessage("header_error", 'header')}
+        {renderMessage("header_success", 'header', 'success')}
         <form onSubmit={handleSubmit}>
           <div className="input">
             <input
@@ -50,18 +75,15 @@ export default function AdminDashboard() {
               onChange={(e) => setNewsTitle(e.target.value)}
               required
             />
-            {renderMessage("news_title")}
           </div>
-          <div className="input">
-            <input
-              type="textarea"
+          <div className="input input-textarea">
+            <textarea
               name="news_data"
               value={newsData}
               placeholder='News Data'
               onChange={(e) => setNewsData(e.target.value)}
               required
             />
-            {renderMessage("news_data")}
           </div>
           <div className="button">
             <input className="submit-button" type="submit" />

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { NewsModel } from '../schema/news_schema.js'
 import { APIResponse, APIError } from '../middleware/response_formatter.js'
 import dotenv from "dotenv";
 dotenv.config();
@@ -46,23 +47,21 @@ export async function getWeather(req, res) {
 export async function addNews(req, res) {
   try {
     var { news_title, news_data } = req.body;
-    const user = await UserModel.findOne({ email })
+    const news = await NewsModel.findOne({ news_title })
     let templateData = { data: [], message: '' }
     let isError = false
-    if (user) {
+    if (news) {
       isError = true
-      templateData.data = { error: 'EMAIL_IN_USE' }
-      templateData.message = 'This email is already in use'
+      templateData.data = { error: 'NEWS_ALREADY_EXISTS' }
+      templateData.message = 'This news is already added'
     }
     else {
-      const hashpassword = await Bcrypt.hash(password, 10);
-      const role = 'admin'
-      let newUser = new UserModel({ fname, lname, role, email, password: hashpassword })
-      newUser = await newUser.save()
-      const { _id, ...rest } = newUser
-      var { password, __v, updatedAt, ...userData } = rest._doc
-      templateData.data = [userData]
-      templateData.message = `User is created successfully(With Role as ${role})`
+      let news = new NewsModel({ news_title, news_data })
+      news = await news.save()
+      const { _id, ...rest } = news
+      var { __v, updatedAt, ...newsData } = rest._doc
+      templateData.data = [newsData]
+      templateData.message = `News Data is added successfully`
     }
     if (!isError) {
       new APIResponse(res, templateData.data, templateData.message).json()
@@ -71,6 +70,7 @@ export async function addNews(req, res) {
       new APIError(res, templateData.data, templateData.message, 400).json()
     }
   } catch (error) {
+    console.log(error)
     new APIError(res, { error: 'INTERNAL_SERVER_ERROR' }, "Internal Server Error Occured!!").json()
   }
 }

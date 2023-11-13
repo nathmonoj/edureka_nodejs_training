@@ -1,8 +1,8 @@
 # Final-Certification-Assignment 1 POC
 > Assignment to build a Media App.
   Description :: Application has two parts.
-  Customer Front End :: To display Latest News, Weather Update, Live Group Chat and Sports Section
-  Admin Back End :: To display Latest News, Weather Update, Live Group Chat and Sports Section
+  Customer Front End :: To display Latest News, Weather Update, Sign In and Sign Up sections
+  Admin Back End :: To display Latest News, Weather Update, Sign Up and Sign In users
 
 __Table of contents__
 
@@ -44,11 +44,15 @@ __Table of contents__
   
   The Front End site shall run in port 3000 as http://localhost:3000/ and Back Node site shall run in port 4000 as http://localhost:4000/. You shall interact for the project only throug the front end(React site)
 
+
+  - Weather-Update ::    
+      Go To http://localhost:3000/ :: Click on the "Weather-Update" section and you shall get the weather of your current location(uses the Node  http://localhost:4000/weather/api/v1/weather) [[Method type POST to get the latest weather update]]
+
+  - Latest News ::    
+      Go To http://localhost:3000/ :: Click on the "Weather-Update" section and you shall get the weather of your current location(uses the Node  http://localhost:4000/news) [[Method type POST to get the latest news update]]
+
   - User Signup ::    
-      Go To http://localhost:3000/ :: Click on the "Sign Up" and register(uses the Node  http://localhost:4000/user/register) [[Method type POST to register user]]
+      Go To http://localhost:3000/ :: Click on the "Sign Up" and register(uses the Node  http://localhost:4000/user/register) [[Method type POST to register user as ADMIN]]
 
   - User Sign In ::    
-      Go To http://localhost:3000/ :: Click on the "Sign In" and Login(uses the Node  http://localhost:4000/user/login) [[Method type POST to login user]]
-
-  - Messenger Dashboard(Socket Io) ::    
-      Post login it opens "Messenger Dashboard" :: Send Messages(uses the Node Socket Io feature "node_backend => socketio_server)
+      Go To http://localhost:3000/ :: Click on the "Sign In" and Login(uses the Node  http://localhost:4000/user/login) [[Method type POST to login user user as ADMIN]]
